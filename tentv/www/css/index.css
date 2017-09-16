@@ -40,7 +40,7 @@ webkit-touch-callout: none;
 }
 /* Portrait layout (default) */
 .app {
-    background: url(../img/logo.jpg) no-repeat center top;
+    background: url(../img/logo.png) no-repeat center top;
     position: absolute;
     left: 28%;
     top: 47%;
