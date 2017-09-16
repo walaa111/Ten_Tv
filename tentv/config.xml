@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.realdealagency.drn" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>drn radio</name>
+<widget id="com.realdealagency.tentv" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>  Ten tv</name>
     <description>
-    drn radio
+  Ten tv
     </description>
     <author email="ceo@realdealagency.com" href="http://www.realdealagency.com">
-        Real Deal Team
+      Ten tv
     </author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
