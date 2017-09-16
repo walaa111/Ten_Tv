@@ -54,7 +54,6 @@
         <icon src="res/android/icon.png" density="xhdpi" />
         <icon src="res/android/icon.png" density="xxhdpi" />
         <icon src="res/android/icon.png" density="xxxhdpi" />
-    
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
