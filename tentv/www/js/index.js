@@ -16,10 +16,38 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+function openBrowser() {
+   var url = 'http://drn.fm/drn/';
+   var target = '_self';
+   var options = "location = none"
+   var ref = cordova.InAppBrowser.open(url, target, options);
+   
+   ref.addEventListener('loadstart', loadstartCallback);
+   ref.addEventListener('loadstop', loadstopCallback);
+   ref.addEventListener('loadloaderror', loaderrorCallback);
+   ref.addEventListener('exit', exitCallback);
+
+   function loadstartCallback(event) {
+      console.log('Loading started: '  + event.url)
+   }
+
+   function loadstopCallback(event) {
+      console.log('Loading finished: ' + event.url)
+   }
+
+   function loaderrorCallback(error) {
+      console.log('Loading error: ' + error.message)
+   }
+
+   function exitCallback() {
+      console.log('Browser is closed...')
+   }
+}
 var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        document.getElementById("openBrowser").addEventListener("click", openBrowser);
     },
 
     // deviceready Event Handler
@@ -28,19 +56,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-	admob.initAdmob("ca-app-pub-7251676025279948/7827344712","ca-app-pub-7251676025279948/5792208319");
-	admob.showBanner(admob.BannerSize.BANNER, admob.Position.BOTTOM_APP);
-
-	var inAppBrowserbRef = cordova.InAppBrowser.open('https://electrostar.ovplatform.tk', '_self', 'location=no,toolbar=no');
-        inAppBrowserbRef = cordova.InAppBrowser.open('http://matthew.realdeal.com.eg/Tentv/', '_self', 'location=no,toolbar=no');
-        /*inAppBrowserbRef.addEventListener('loadstart', inAppBrowserbLoadStart);
-        inAppBrowserbRef.addEventListener('loadstop', inAppBrowserbLoadStop);
-        inAppBrowserbRef.addEventListener('loaderror', inAppBrowserbLoadError);
-        inAppBrowserbRef.addEventListener('exit', inAppBrowserbClose);
-	*/
-	
-	//alert('end of ready');
-    
+         openBrowser();
     },
 
     // Update DOM on a Received Event
@@ -52,7 +68,7 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        //console.log('Received Event: ' + id);
+        console.log('Received Event: ' + id);
     }
 };
 
