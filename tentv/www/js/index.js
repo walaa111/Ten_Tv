@@ -19,7 +19,7 @@
 function openBrowser() {
    var url = 'https://cordova.apache.org';
    var target = '_self';
-   var options = "location = no,toolbar=no";
+   var options = "location = none,toolbar = none";
 
    var ref = cordova.InAppBrowser.open(url, target, options);
    
