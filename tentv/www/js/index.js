@@ -17,9 +17,9 @@
  * under the License.
  */
 function openBrowser() {
-   var url = 'https://cordova.apache.org';
+   var url = 'http://matthew.realdeal.com.eg/Tentv';
    var target = '_self';
-   var options = "location = none,toolbar = none";
+   var options = "location=no,toolbar=no";
 
    var ref = cordova.InAppBrowser.open(url, target, options);
    
