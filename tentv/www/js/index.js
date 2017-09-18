@@ -56,6 +56,10 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
+               this.receivedEvent('deviceready');
+	admob.initAdmob("ca-app-pub-7251676025279948/7827344712","ca-app-pub-7251676025279948/5792208319");
+	admob.showBanner(admob.BannerSize.BANNER, admob.Position.BOTTOM_APP);
+
         this.receivedEvent('deviceready');
          openBrowser();
     },
