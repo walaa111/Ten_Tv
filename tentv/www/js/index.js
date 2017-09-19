@@ -62,6 +62,7 @@ var app = {
 
         this.receivedEvent('deviceready');
          openBrowser();
+	    Splashscreen.hide();
     },
 
     // Update DOM on a Received Event
