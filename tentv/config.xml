@@ -27,6 +27,13 @@
         <icon src="res/android/icon.png" density="xxhdpi" />
         <icon src="res/android/icon.png" density="xxxhdpi" />
     </platform>
+     <preference name="SplashMaintainAspectRatio" value="true"/>
+  <preference name="FadeSplashScreenDuration" value="300"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="AutoHideSplashScreen" value="false" />  
+  <preference name="ShowSplashScreen" value="true"/>
+  <preference name="SplashScreenDelay" value="30000"/>
+  <preference name="SplashShowOnlyFirstTime" value="false"/>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
