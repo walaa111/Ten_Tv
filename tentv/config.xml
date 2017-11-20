@@ -39,4 +39,5 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <engine name="android" spec="~6.3.0" />
+    <plugin name="cordova-plugin-admob-simple" spec="~3.3.4" />
 </widget>

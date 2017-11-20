@@ -40,4 +40,8 @@
     <preference name="ShowSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="30000" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
+    <feature name="AdMob">
+        <param name="android-package" value="com.cupertino.cordova.plugin.AdMob" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>
